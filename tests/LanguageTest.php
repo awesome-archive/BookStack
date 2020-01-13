@@ -8,10 +8,10 @@ class LanguageTest extends TestCase
     /**
      * LanguageTest constructor.
      */
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
-        $this->langs = array_diff(scandir(resource_path('lang')), ['..', '.', 'check.php']);
+        $this->langs = array_diff(scandir(resource_path('lang')), ['..', '.', 'check.php', 'format.php']);
     }
 
     public function test_locales_config_key_set_properly()
@@ -39,21 +39,6 @@ class LanguageTest extends TestCase
 
         $loginPageFrenchReq = $this->get('/login', ['Accept-Language' => 'fr']);
         $loginPageFrenchReq->assertDontSee('Se Connecter');
-    }
-
-    public function test_js_endpoint_for_each_language()
-    {
-
-        $visibleKeys = ['common', 'components', 'entities', 'errors'];
-
-        $this->asEditor();
-        foreach ($this->langs as $lang) {
-            setting()->putUser($this->getEditor(), 'language', $lang);
-            $transResp = $this->get('/translations');
-            foreach ($visibleKeys as $key) {
-                $transResp->assertSee($key);
-            }
-        }
     }
 
     public function test_all_lang_files_loadable()

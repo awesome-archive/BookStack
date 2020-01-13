@@ -1,10 +1,8 @@
 <?php
-
+/**
+ * Text shown in error messaging.
+ */
 return [
-
-    /**
-     * Error text strings.
-     */
 
     // Permissions
     'permission' => '您无权访问所请求的页面。',
@@ -19,6 +17,12 @@ return [
     'ldap_fail_authed' => '带有标识名称和密码的LDAP访问失败。',
     'ldap_extension_not_installed' => '未安装LDAP PHP扩展程序',
     'ldap_cannot_connect' => '无法连接到ldap服务器，初始连接失败',
+    'saml_already_logged_in' => 'Already logged in',
+    'saml_user_not_registered' => 'The user :name is not registered and automatic registration is disabled',
+    'saml_no_email_address' => 'Could not find an email address, for this user, in the data provided by the external authentication system',
+    'saml_invalid_response_id' => 'The request from the external authentication system is not recognised by a process started by this application. Navigating back after a login could cause this issue.',
+    'saml_fail_authed' => 'Login using :system failed, system did not provide successful authorization',
+    'saml_email_exists' => 'Registration unsuccessful since a user already exists with email address ":email"',
     'social_no_action_defined' => '没有定义行为',
     'social_login_bad_response' => "在 :socialAccount 登录时遇到错误：\n:error",
     'social_account_in_use' => ':socialAccount 账户已被使用，请尝试通过 :socialAccount 选项登录。',
@@ -29,19 +33,21 @@ return [
     'social_account_register_instructions' => '如果您还没有帐户，您可以使用 :socialAccount 选项注册账户。',
     'social_driver_not_found' => '未找到社交驱动程序',
     'social_driver_not_configured' => '您的:socialAccount社交设置不正确。',
+    'invite_token_expired' => '此邀请链接已过期。 您可以尝试重置您的帐户密码。',
 
     // System
     'path_not_writable' => '无法上传到文件路径“:filePath”，请确保它可写入服务器。',
     'cannot_get_image_from_url' => '无法从 :url 中获取图片',
     'cannot_create_thumbs' => '服务器无法创建缩略图，请检查您是否安装了GD PHP扩展。',
     'server_upload_limit' => '服务器不允许上传此大小的文件。 请尝试较小的文件。',
-	'uploaded'  => 'The server does not allow uploads of this size. Please try a smaller file size.',
+    'uploaded'  => '服务器不允许上传此大小的文件。 请尝试较小的文件。',
     'image_upload_error' => '上传图片时发生错误',
-	'image_upload_type_error' => '上传的图像类型无效',
+    'image_upload_type_error' => '上传的图像类型无效',
+    'file_upload_timeout' => '文件上传已超时。',
 
     // Attachments
     'attachment_page_mismatch' => '附件更新期间的页面不匹配',
-	'attachment_not_found' => '找不到附件',
+    'attachment_not_found' => '找不到附件',
 
     // Pages
     'page_draft_autosave_fail' => '无法保存草稿，确保您在保存页面之前已经连接到互联网',
@@ -49,7 +55,7 @@ return [
 
     // Entities
     'entity_not_found' => '未找到实体',
-	'bookshelf_not_found' => '未找到书架',
+    'bookshelf_not_found' => '未找到书架',
     'book_not_found' => '未找到图书',
     'page_not_found' => '未找到页面',
     'chapter_not_found' => '未找到章节',
@@ -65,6 +71,7 @@ return [
     'role_cannot_be_edited' => '无法编辑该角色',
     'role_system_cannot_be_deleted' => '无法删除系统角色',
     'role_registration_default_cannot_delete' => '无法删除设置为默认注册的角色',
+    'role_cannot_remove_only_admin' => '该用户是分配给管理员角色的唯一用户。 在尝试在此处删除管理员角色之前，请将其分配给其他用户。',
 
     // Comments
     'comment_list' => '提取评论时出现错误。',
@@ -80,4 +87,5 @@ return [
     'error_occurred' => '出现错误',
     'app_down' => ':appName现在正在关闭',
     'back_soon' => '请耐心等待网站的恢复。',
+
 ];

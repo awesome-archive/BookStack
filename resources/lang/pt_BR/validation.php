@@ -1,18 +1,13 @@
 <?php
-
+/**
+ * Validation Lines
+ * The following language lines contain the default error messages used by
+ * the validator class. Some of these rules have multiple versions such
+ * as the size rules. Feel free to tweak each of these messages here.
+ */
 return [
 
-    /*
-    |--------------------------------------------------------------------------
-    | Validation Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines contain the default error messages used by
-    | the validator class. Some of these rules have multiple versions such
-    | as the size rules. Feel free to tweak each of these messages here.
-    |
-    */
-
+    // Standard laravel validation lines
     'accepted'             => 'O :attribute deve ser aceito.',
     'active_url'           => 'O :attribute não é uma URL válida.',
     'after'                => 'O :attribute deve ser uma data posterior à data :date.',
@@ -35,12 +30,41 @@ return [
     'digits'               => 'O campo :attribute deve ter :digits dígitos.',
     'digits_between'       => 'O campo :attribute deve ter entre :min e :max dígitos.',
     'email'                => 'O campo :attribute deve ser um e-mail válido.',
+    'ends_with' => 'The :attribute must end with one of the following: :values',
     'filled'               => 'O campo :attribute é requerido.',
+    'gt'                   => [
+        'numeric' => 'The :attribute must be greater than :value.',
+        'file'    => 'The :attribute must be greater than :value kilobytes.',
+        'string'  => 'The :attribute must be greater than :value characters.',
+        'array'   => 'The :attribute must have more than :value items.',
+    ],
+    'gte'                  => [
+        'numeric' => 'The :attribute must be greater than or equal :value.',
+        'file'    => 'The :attribute must be greater than or equal :value kilobytes.',
+        'string'  => 'The :attribute must be greater than or equal :value characters.',
+        'array'   => 'The :attribute must have :value items or more.',
+    ],
     'exists'               => 'O atributo :attribute selecionado não é válido.',
     'image'                => 'O campo :attribute deve ser uma imagem.',
+    'image_extension'      => 'O campo :attribute deve ter uma extensão de imagem válida & suportada.',
     'in'                   => 'The selected :attribute is invalid.',
     'integer'              => 'O campo :attribute deve ser um número inteiro.',
     'ip'                   => 'O campo :attribute deve ser um IP válido.',
+    'ipv4'                 => 'The :attribute must be a valid IPv4 address.',
+    'ipv6'                 => 'The :attribute must be a valid IPv6 address.',
+    'json'                 => 'The :attribute must be a valid JSON string.',
+    'lt'                   => [
+        'numeric' => 'The :attribute must be less than :value.',
+        'file'    => 'The :attribute must be less than :value kilobytes.',
+        'string'  => 'The :attribute must be less than :value characters.',
+        'array'   => 'The :attribute must have less than :value items.',
+    ],
+    'lte'                  => [
+        'numeric' => 'The :attribute must be less than or equal :value.',
+        'file'    => 'The :attribute must be less than or equal :value kilobytes.',
+        'string'  => 'The :attribute must be less than or equal :value characters.',
+        'array'   => 'The :attribute must not have more than :value items.',
+    ],
     'max'                  => [
         'numeric' => 'O valor para o campo :attribute não deve ser maior que :max.',
         'file'    => 'O valor para o campo :attribute não deve ter tamanho maior que :max kilobytes.',
@@ -54,7 +78,9 @@ return [
         'string'  => 'O valor para o campo :attribute não deve ter menos que :min caracteres.',
         'array'   => 'O valor para o campo :attribute não deve ter menos que :min itens.',
     ],
+    'no_double_extension'  => 'O campo :attribute deve ter apenas uma extensão de arquivo.',
     'not_in'               => 'O campo selecionado :attribute é inválido.',
+    'not_regex'            => 'The :attribute format is invalid.',
     'numeric'              => 'O campo :attribute deve ser um número.',
     'regex'                => 'O formato do campo :attribute é inválido.',
     'required'             => 'O campo :attribute é requerido.',
@@ -74,35 +100,15 @@ return [
     'timezone'             => 'O campo :attribute deve conter uma timezone válida.',
     'unique'               => 'Já existe um campo/dado de nome :attribute.',
     'url'                  => 'O formato da URL :attribute é inválido.',
+    'uploaded'             => 'O arquivo não pôde ser carregado. O servidor pode não aceitar arquivos deste tamanho.',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Validation Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | Here you may specify custom validation messages for attributes using the
-    | convention "attribute.rule" to name the lines. This makes it quick to
-    | specify a specific custom language line for a given attribute rule.
-    |
-    */
-
+    // Custom validation lines
     'custom' => [
         'password-confirm' => [
             'required_with' => 'Confirmação de senha requerida',
         ],
     ],
 
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Validation Attributes
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines are used to swap attribute place-holders
-    | with something more reader friendly such as E-Mail Address instead
-    | of "email". This simply helps us make messages a little cleaner.
-    |
-    */
-
+    // Custom validation attributes
     'attributes' => [],
-
 ];

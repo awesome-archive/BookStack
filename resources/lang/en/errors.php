@@ -1,10 +1,8 @@
 <?php
-
+/**
+ * Text shown in error messaging.
+ */
 return [
-
-    /**
-     * Error text strings.
-     */
 
     // Permissions
     'permission' => 'You do not have permission to access the requested page.',
@@ -19,6 +17,12 @@ return [
     'ldap_fail_authed' => 'LDAP access failed using given dn & password details',
     'ldap_extension_not_installed' => 'LDAP PHP extension not installed',
     'ldap_cannot_connect' => 'Cannot connect to ldap server, Initial connection failed',
+    'saml_already_logged_in' => 'Already logged in',
+    'saml_user_not_registered' => 'The user :name is not registered and automatic registration is disabled',
+    'saml_no_email_address' => 'Could not find an email address, for this user, in the data provided by the external authentication system',
+    'saml_invalid_response_id' => 'The request from the external authentication system is not recognised by a process started by this application. Navigating back after a login could cause this issue.',
+    'saml_fail_authed' => 'Login using :system failed, system did not provide successful authorization',
+    'saml_email_exists' => 'Registration unsuccessful since a user already exists with email address ":email"',
     'social_no_action_defined' => 'No action defined',
     'social_login_bad_response' => "Error received during :socialAccount login: \n:error",
     'social_account_in_use' => 'This :socialAccount account is already in use, Try logging in via the :socialAccount option.',
@@ -29,6 +33,7 @@ return [
     'social_account_register_instructions' => 'If you do not yet have an account, You can register an account using the :socialAccount option.',
     'social_driver_not_found' => 'Social driver not found',
     'social_driver_not_configured' => 'Your :socialAccount social settings are not configured correctly.',
+    'invite_token_expired' => 'This invitation link has expired. You can instead try to reset your account password.',
 
     // System
     'path_not_writable' => 'File path :filePath could not be uploaded to. Ensure it is writable to the server.',
@@ -38,6 +43,7 @@ return [
     'uploaded'  => 'The server does not allow uploads of this size. Please try a smaller file size.',
     'image_upload_error' => 'An error occurred uploading the image',
     'image_upload_type_error' => 'The image type being uploaded is invalid',
+    'file_upload_timeout' => 'The file upload has timed out.',
 
     // Attachments
     'attachment_page_mismatch' => 'Page mismatch during attachment update',
@@ -65,6 +71,7 @@ return [
     'role_cannot_be_edited' => 'This role cannot be edited',
     'role_system_cannot_be_deleted' => 'This role is a system role and cannot be deleted',
     'role_registration_default_cannot_delete' => 'This role cannot be deleted while set as the default registration role',
+    'role_cannot_remove_only_admin' => 'This user is the only user assigned to the administrator role. Assign the administrator role to another user before attempting to remove it here.',
 
     // Comments
     'comment_list' => 'An error occurred while fetching the comments.',
@@ -80,4 +87,5 @@ return [
     'error_occurred' => 'An Error Occurred',
     'app_down' => ':appName is down right now',
     'back_soon' => 'It will be back up soon.',
+
 ];

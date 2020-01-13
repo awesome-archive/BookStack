@@ -1,10 +1,8 @@
 <?php
-
+/**
+ * Text shown in error messaging.
+ */
 return [
-
-    /**
-     * Error text strings.
-     */
 
     // Permissions
     'permission' => 'Ud. no tiene permisos para visualizar la página solicitada.',
@@ -19,6 +17,12 @@ return [
     'ldap_fail_authed' => 'El acceso LDAP usando el dn & password detallados',
     'ldap_extension_not_installed' => 'La extensión LDAP PHP no se encuentra instalada',
     'ldap_cannot_connect' => 'No se puede conectar con el servidor ldap, la conexión inicial ha fallado',
+    'saml_already_logged_in' => 'Ya estás conectado',
+    'saml_user_not_registered' => 'El usuario :name no está registrado y el registro automático está deshabilitado',
+    'saml_no_email_address' => 'No se pudo encontrar una dirección de correo electrónico, para este usuario, en los datos proporcionados por el sistema de autenticación externo',
+    'saml_invalid_response_id' => 'La solicitud del sistema de autenticación externo no está reconocida por un proceso iniciado por esta aplicación. Navegar hacia atrás después de un inicio de sesión podría causar este problema.',
+    'saml_fail_authed' => 'El inicio de sesión con :system falló, el sistema no proporcionó una autorización correcta',
+    'saml_email_exists' => 'Registro fallido porque un usuario ya existe con la dirección de correo electrónico ":email"',
     'social_no_action_defined' => 'Acción no definida',
     'social_login_bad_response' => "SE recibió un Error durante el acceso con :socialAccount : \n:error",
     'social_account_in_use' => 'la cuenta :socialAccount ya se encuentra en uso, intente loguearse a través de la opcón :socialAccount .',
@@ -29,15 +33,17 @@ return [
     'social_account_register_instructions' => 'Si no dispone de una cuenta, puede registrar una cuenta usando la opción de :socialAccount .',
     'social_driver_not_found' => 'Driver social no encontrado',
     'social_driver_not_configured' => 'Su configuración :socialAccount no es correcta.',
+    'invite_token_expired' => 'El enace de la esta invitación expiró. Puede intentar restablecer la contraseña de su cuenta',
 
     // System
     'path_not_writable' => 'La ruta :filePath no pudo ser cargada. Asegurese de que es escribible por el servidor.',
     'cannot_get_image_from_url' => 'No se puede obtener la imagen desde :url',
     'cannot_create_thumbs' => 'El servidor no puede crear la imagen miniatura. Por favor chequee que tiene la extensión GD instalada.',
     'server_upload_limit' => 'El servidor no permite la subida de ficheros de este tamañ. Por favor intente con un fichero de menor tamañ.',
-    'uploaded'  => 'El servidor no permite subir archivos de este tamaño. Por favor intente un tamaño menor.',    'image_upload_error' => 'Ha ocurrido un error al subir la imagen',
+    'uploaded'  => 'El servidor no permite subir archivos de este tamaño. Por favor intente un tamaño menor.',
     'image_upload_error' => 'Ha ocurrido un error al subir la imagen',
     'image_upload_type_error' => 'El tipo de imagen subida es inválido.',
+    'file_upload_timeout' => 'La carga del archivo ha caducado.',
 
     // Attachments
     'attachment_page_mismatch' => 'Página no coincidente durante la subida del adjunto ',
@@ -65,6 +71,7 @@ return [
     'role_cannot_be_edited' => 'Este rol no puede ser editado',
     'role_system_cannot_be_deleted' => 'Este rol es un rol de sistema y no puede ser borrado',
     'role_registration_default_cannot_delete' => 'Este rol no puede ser borrado mientras sea el rol por defecto de registro',
+    'role_cannot_remove_only_admin' => 'Este usuario es el único asignado al rol de administrador. Asigne el rol de administrador a otro usuario antes de intentar eliminarlo.',
 
     // Comments
     'comment_list' => 'Se produjo un error al obtener los comentarios.',
@@ -80,4 +87,5 @@ return [
     'error_occurred' => 'Ha ocurrido un error',
     'app_down' => 'La aplicación :appName se encuentra caída en este momento',
     'back_soon' => 'Volverá a estar operativa en corto tiempo.',
+
 ];

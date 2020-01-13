@@ -1,10 +1,8 @@
 <?php
-
+/**
+ * Text shown in error messaging.
+ */
 return [
-
-    /**
-     * Error text strings.
-     */
 
     // Permissions
     'permission' => 'У вас нет доступа к запрашиваемой странице.',
@@ -19,8 +17,14 @@ return [
     'ldap_fail_authed' => 'Не удалось получить доступ к LDAP, используя данные dn & password',
     'ldap_extension_not_installed' => 'LDAP расширения для PHP не установлено',
     'ldap_cannot_connect' => 'Не удается подключиться к серверу ldap, не удалось выполнить начальное соединение',
+    'saml_already_logged_in' => 'Already logged in',
+    'saml_user_not_registered' => 'The user :name is not registered and automatic registration is disabled',
+    'saml_no_email_address' => 'Could not find an email address, for this user, in the data provided by the external authentication system',
+    'saml_invalid_response_id' => 'The request from the external authentication system is not recognised by a process started by this application. Navigating back after a login could cause this issue.',
+    'saml_fail_authed' => 'Login using :system failed, system did not provide successful authorization',
+    'saml_email_exists' => 'Registration unsuccessful since a user already exists with email address ":email"',
     'social_no_action_defined' => 'Действие не определено',
-    'social_login_bad_response' => 'При попытке входа с :socialAccount произошла ошибка: \n:error',
+    'social_login_bad_response' => "При попытке входа с :socialAccount произошла ошибка: \\n:error",
     'social_account_in_use' => 'Этот :socialAccount аккаунт уже исопльзуется, попробуйте войти с параметрами :socialAccount.',
     'social_account_email_in_use' => 'Электронный ящик :email уже используется. Если у вас уже есть учетная запись, вы можете подключить свою учетную запись :socialAccount из настроек своего профиля.',
     'social_account_existing' => 'Этот :socialAccount уже привязан к вашему профилю.',
@@ -29,6 +33,7 @@ return [
     'social_account_register_instructions' => 'Если у вас еще нет учетной записи, вы можете зарегистрироваться, используя параметр :socialAccount.',
     'social_driver_not_found' => 'Драйвер для Соцсети не найден',
     'social_driver_not_configured' => 'Настройки вашего :socialAccount заданы неправильно.',
+    'invite_token_expired' => 'Срок действия приглашения истек. Вместо этого вы можете попытаться сбросить пароль своей учетной записи.',
 
     // System
     'path_not_writable' => 'Невозможно загрузить файл по пути :filePath . Убедитесь что сервер доступен для записи.',
@@ -38,6 +43,7 @@ return [
     'uploaded'  => 'Сервер не позволяет загружать файлы такого размера. Пожалуйста, попробуйте файл меньше.',
     'image_upload_error' => 'Произошла ошибка при загрузке изображения.',
     'image_upload_type_error' => 'Неправильный тип загружаемого изображения',
+    'file_upload_timeout' => 'Выгрузка файла закончилась.',
 
     // Attachments
     'attachment_page_mismatch' => 'Несоответствие страницы во время обновления вложения',
@@ -49,6 +55,7 @@ return [
 
     // Entities
     'entity_not_found' => 'Объект не найден',
+    'bookshelf_not_found' => 'Полка не найдена',
     'book_not_found' => 'Книга не найдена',
     'page_not_found' => 'Страница не найдена',
     'chapter_not_found' => 'Глава не найдена',
@@ -64,6 +71,7 @@ return [
     'role_cannot_be_edited' => 'Невозможно отредактировать данную роль',
     'role_system_cannot_be_deleted' => 'Эта роль является системной и не может быть удалена',
     'role_registration_default_cannot_delete' => 'Эта роль не может быть удалена, так как она устанолена в качестве роли по умолчанию',
+    'role_cannot_remove_only_admin' => 'Этот пользователь единственный с правами администратора. Назначьте роль администратора другому пользователю, прежде чем удалить этого.',
 
     // Comments
     'comment_list' => 'При получении комментариев произошла ошибка.',
@@ -79,4 +87,5 @@ return [
     'error_occurred' => 'Произошла ошибка',
     'app_down' => ':appName в данный момент не достпуно',
     'back_soon' => 'Скоро восстановится.',
+
 ];

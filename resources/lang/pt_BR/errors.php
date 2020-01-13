@@ -1,10 +1,8 @@
 <?php
-
+/**
+ * Text shown in error messaging.
+ */
 return [
-
-    /**
-     * Error text strings.
-     */
 
     // Permissions
     'permission' => 'Você não tem permissões para acessar a página requerida.',
@@ -19,6 +17,12 @@ return [
     'ldap_fail_authed' => 'O acesso LDAP falhou ao tentar os detalhes do dn e senha fornecidos',
     'ldap_extension_not_installed' => 'As extensões LDAP PHP não estão instaladas',
     'ldap_cannot_connect' => 'Não foi possível conectar ao servidor LDAP. Conexão inicial falhou',
+    'saml_already_logged_in' => 'Already logged in',
+    'saml_user_not_registered' => 'The user :name is not registered and automatic registration is disabled',
+    'saml_no_email_address' => 'Could not find an email address, for this user, in the data provided by the external authentication system',
+    'saml_invalid_response_id' => 'The request from the external authentication system is not recognised by a process started by this application. Navigating back after a login could cause this issue.',
+    'saml_fail_authed' => 'Login using :system failed, system did not provide successful authorization',
+    'saml_email_exists' => 'Registration unsuccessful since a user already exists with email address ":email"',
     'social_no_action_defined' => 'Nenhuma ação definida',
     'social_login_bad_response' => "Erro recebido durante o login :socialAccount: \n:error",
     'social_account_in_use' => 'Essa conta :socialAccount já está em uso. Por favor, tente se logar usando a opção :socialAccount',
@@ -29,15 +33,17 @@ return [
     'social_account_register_instructions' => 'Se você não tem uma conta, você poderá fazer o registro usando a opção :socialAccount',
     'social_driver_not_found' => 'Social driver não encontrado',
     'social_driver_not_configured' => 'Seus parâmetros socials de :socialAccount não estão configurados corretamente.',
+    'invite_token_expired' => 'This invitation link has expired. You can instead try to reset your account password.',
 
     // System
     'path_not_writable' => 'O caminho de destino (:filePath) de upload de arquivo não possui permissão de escrita. Certifique-se que ele possui direitos de escrita no servidor.',
     'cannot_get_image_from_url' => 'Não foi possivel capturar a imagem a partir de :url',
     'cannot_create_thumbs' => 'O servidor não pôde criar as miniaturas de imagem. Por favor, verifique se a extensão GD PHP está instalada.',
     'server_upload_limit' => 'O servidor não permite o upload de arquivos com esse tamanho. Por favor, tente fazer o upload de arquivos de menor tamanho.',
-    'uploaded' => 'O servidor não permite o upload de arquivos com esse tamanho. Por favor, tente fazer o upload de arquivos de menor tamanho.',
+    'uploaded'  => 'O servidor não permite o upload de arquivos com esse tamanho. Por favor, tente fazer o upload de arquivos de menor tamanho.',
     'image_upload_error' => 'Um erro aconteceu enquanto o servidor tentava efetuar o upload da imagem',
     'image_upload_type_error' => 'O tipo de imagem que está sendo feito upload é inválido',
+    'file_upload_timeout' => 'O upload do arquivo expirou.',
 
     // Attachments
     'attachment_page_mismatch' => 'Erro de \'Page mismatch\' durante a atualização do anexo',
@@ -65,8 +71,9 @@ return [
     'role_cannot_be_edited' => 'Esse perfil não pode ser editado',
     'role_system_cannot_be_deleted' => 'Esse perfil é um perfil de sistema e não pode ser excluído',
     'role_registration_default_cannot_delete' => 'Esse perfil não poderá se excluído enquando estiver registrado como o perfil padrão',
+    'role_cannot_remove_only_admin' => 'Este usuário é o único usuário atribuído ao perfil de administrador. Atribua o perfil de administrador a outro usuário antes de tentar removê-lo aqui.',
 
-    // comments
+    // Comments
     'comment_list' => 'Ocorreu um erro ao buscar os comentários.',
     'cannot_add_comment_to_draft' => 'Você não pode adicionar comentários a um rascunho.',
     'comment_add' => 'Ocorreu um erro ao adicionar o comentário.',
@@ -80,4 +87,5 @@ return [
     'error_occurred' => 'Um erro ocorreu',
     'app_down' => ':appName está fora do ar no momento',
     'back_soon' => 'Voltaremos em seguida.',
+
 ];
